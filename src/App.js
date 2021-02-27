@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
+  const nayoks = ['Jasim','Riaz','Salman','Sakil'];
   return (
     <div className="App">
       <header className="App-header">
@@ -11,6 +12,9 @@ function App() {
         <Nayok name="Sakib"></Nayok>
         <MovieCounter></MovieCounter>
         <Product></Product>
+        {
+          nayoks.map(nayok => <Nayok name={nayok}></Nayok>)
+        }
         
       </header>
     </div>
